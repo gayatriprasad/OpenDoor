@@ -6,7 +6,7 @@ First, I began by reading the data. My initial impression was that this is a goo
 
 The first step was to examine the missing values, check for NaN values, and plot the distribution for the columns in the dim_homes data.
 
-One of the first observations about the target variable was that it represents an imbalanced dataset. Approximately 84% of offers were not accepted, while 16% were accepted. One idea I had was to use SMOTE and imbalanced-learn to mitigate this issue.
+One of the first observations about the target variable was that it represents an imbalanced dataset. Approximately 84% of offers were not accepted, while 16% were accepted. One idea I had was to use SMOTE and imbalanced-learn libraries to mitigate this issue.
 
 I experimented with merging the fct_offers and dim_homes tables to generate a larger dataset, which was then used for modeling. Since this is clearly a classification problem, I employed Logistic Regression, Support Vector Machines, Random Forest Classification, and XGBoost to model the data. I noticed that precision and recall suffered significantly, likely due to the class imbalance and the use of a rudimentary model. Additionally, the data was not preprocessed. It's worth noting that the F1-Score remained high despite these issues.
 
